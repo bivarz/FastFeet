@@ -15,13 +15,12 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      Number: {
-        type: Sequelize.INTEGER,
+      number: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       complement: {
         type: Sequelize.STRING,
-        allowNull: false,
       },
       city: {
         type: Sequelize.STRING,
@@ -31,12 +30,18 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      zip_code: {
+      zipcode: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      created_at: { type: Sequelize.DATE, allowNull: false },
-      updated_at: { type: Sequelize.DATE, allowNull: false },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
     });
   },
 

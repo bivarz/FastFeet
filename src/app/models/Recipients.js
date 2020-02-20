@@ -11,7 +11,7 @@ class Recipients extends Model {
         number: Sequelize.STRING,
         state: Sequelize.STRING,
         city: Sequelize.STRING,
-        zip_code: Sequelize.STRING,
+        zipcode: Sequelize.STRING,
       },
       { sequelize }
     );

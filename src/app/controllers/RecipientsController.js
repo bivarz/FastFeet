@@ -54,10 +54,7 @@ class RecipientsController {
     const schema = yup.object().shape({
       name: yup.string(),
       email: yup.string().email(),
-      oldPassword: yup
-        .string()
-        .min(6)
-        .max(12),
+      oldPassword: yup.string().min(6),
       password: yup
         .string()
         .min(6)

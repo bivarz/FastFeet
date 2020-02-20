@@ -1,3 +1,4 @@
+// configuração de credenciais.
 module.exports = {
   dialect: 'postgres',
   host: 'localhost',
@@ -6,7 +7,7 @@ module.exports = {
   database: 'fastfeet',
   define: {
     timestamps: true,
-    underscored: true,
-    underscoredAll: true,
+    underScored: true,
+    underScoredAll: true,
   },
 };
