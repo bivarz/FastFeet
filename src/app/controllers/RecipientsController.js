@@ -8,7 +8,7 @@ class RecipientsController {
       street: yup.string().required(),
       complement: yup.string(),
       number: yup.string().required(),
-      zip_code: yup.string().required(),
+      zipcode: yup.string().required(),
       state: yup
         .string()
         .required()
@@ -20,10 +20,10 @@ class RecipientsController {
       return res.status(400).json({ error: 'validation fails' });
     }
 
-    const { name, street, zip_code } = req.body;
+    const { name, street, zipcode } = req.body;
 
     const recipientExists = await Recipients.findOne({
-      where: { name, street, number: req.body.number, zip_code },
+      where: { name, street, number: req.body.number, zipcode },
     });
 
     if (recipientExists)
@@ -40,7 +40,7 @@ class RecipientsController {
       complement,
       state,
       city,
-      zip_code,
+      zipcode,
     });
   }
 
@@ -53,43 +53,35 @@ class RecipientsController {
   async update(req, res) {
     const schema = yup.object().shape({
       name: yup.string(),
-      email: yup.string().email(),
-      oldPassword: yup.string().min(6),
-      password: yup
-        .string()
-        .min(6)
-        .when('oldPassword', (oldPassword, field) =>
-          oldPassword ? field.required() : field
-        ),
-      confirmPass: yup
-        .string()
-        .when('password', (password, field) =>
-          password ? field.required().oneOf([yup.ref('password')]) : field
-        ),
+      zipcode: yup.string(),
+      number: yup.string(),
     });
 
     if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation fails' });
-    }
-    const { email, oldPassword } = req.body;
-
-    const user = await Recipients.findByPk(req.userId);
-
-    if (email && email !== user.email) {
-      const userExists = await Recipients.findOne({ where: { email } });
-
-      if (userExists) {
-        return res.status(400).json({ error: 'User Already exists' });
-      }
+      return res.status(400).json({ error: 'Update Fails' });
     }
 
-    if (oldPassword && !(await user.checkPassword(oldPassword))) {
-      return res.status(401).json({ erro: 'The password does not match' });
+    const { id } = req.params;
+    const recipientId = await Recipients.findByPk(id);
+
+    if (!recipientId) {
+      return res.status(400).json({ erro: 'Recipient not found!!' });
     }
+    await recipientId.update(req.body);
 
-    const { id, name, provider } = await user.update(req.body);
+    return res.json({ recipientId });
+  }
 
-    return res.json({ id, name, email, provider });
+  async delete(req, res) {
+    const { id } = req.params;
+    const recipientId = await Recipients.findByPk(id);
+
+    if (!recipientId) {
+      return res.status(400).json({ erro: 'Recipient not found!!' });
+    }
+    await recipientId.destroy();
+
+    return res.send({ message: `the id:${id} was deleted` });
   }
 }
 
