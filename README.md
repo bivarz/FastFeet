@@ -23,12 +23,12 @@
   :small_orange_diamond:JWT (JSON Web Tokens) + Bcrypt-:heavy_check_mark:
   <p></p>
   <p><b>:large_blue_diamond: O que foi feito?</b></p><br>
-  :small_blue_diamond:Configuração Nodemon/Sucrase -> Docker/PostGres -> Sequelize;
-  :small_blue_diamond:Criação do Server;
-  :small_blue_diamond:Criação da conexão com o banco de dados;
-  :small_blue_diamond:Criação dos Models;
-  :small_blue_diamond:Criação dos Controllers;
-  :small_blue_diamond:Criação das Rotas;
-  :small_blue_diamond:Criação das Middlewares;
-  :small_blue_diamond:Criação de Auth com JWT e Bcrypt;
+  :small_blue_diamond:Configuração Nodemon/Sucrase -> Docker/PostGres -> Sequelize;<br>
+  :small_blue_diamond:Criação do Server;<br>
+  :small_blue_diamond:Criação da conexão com o banco de dados;<br>
+  :small_blue_diamond:Criação dos Models;<br>
+  :small_blue_diamond:Criação dos Controllers;<br>
+  :small_blue_diamond:Criação das Rotas;<br>
+  :small_blue_diamond:Criação das Middlewares;<br>
+  :small_blue_diamond:Criação de Auth com JWT e Bcrypt;<br>
  
