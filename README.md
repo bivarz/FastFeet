@@ -16,10 +16,10 @@
 <p align="center">
   
   <p><b>:large_orange_diamond: O que foi usado?</b></p>
-  <li>:small_orange_diamond:Nodemon + Sucrase - :heavy_check_mark:</li>
-  <li>:small_orange_diamond:Prettier + Eslint - :heavy_check_mark:</li>
-  <li>:small_orange_diamond:Sequelize - :heavy_check_mark:</li>
-  <li>:small_orange_diamond:JWT (JSON Web Tokens) + Bcrypt-:heavy_check_mark:</li> <br>
+  :small_orange_diamond:Nodemon + Sucrase - :heavy_check_mark:
+  :small_orange_diamond:Prettier + Eslint - :heavy_check_mark:
+  :small_orange_diamond:Sequelize - :heavy_check_mark:
+  :small_orange_diamond:JWT (JSON Web Tokens) + Bcrypt-:heavy_check_mark:</li> <br>
   
   <p><b>:large_blue_diamond: O que foi feito?</b></p>
  
