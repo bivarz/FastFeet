@@ -22,7 +22,7 @@
   :small_orange_diamond:Sequelize - :heavy_check_mark:<br>
   :small_orange_diamond:JWT (JSON Web Tokens) + Bcrypt-:heavy_check_mark:
   <p></p>
-  <p><b>:large_blue_diamond: O que foi feito?</b></p><br>
+  <p><b>:large_blue_diamond: O que foi feito?</b></p>
   :small_blue_diamond:Configuração Nodemon/Sucrase -> Docker/PostGres -> Sequelize;<br>
   :small_blue_diamond:Criação do Server;<br>
   :small_blue_diamond:Criação da conexão com o banco de dados;<br>
