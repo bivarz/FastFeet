@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Desafio FastFeet
+  Desafio FastFeet!
 </h3>
 
 <h3 align="center">
